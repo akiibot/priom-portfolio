@@ -139,11 +139,14 @@ export default function About() {
                         <div className="absolute top-6 right-8 text-white/5 group-hover:text-white/10 transition-colors">
                             <Quote size={80} />
                         </div>
-                        <h4 className="text-sm text-white/40 uppercase tracking-wider mb-4">Never Give Up</h4>
-                        <p className="text-xl md:text-2xl font-light italic leading-snug text-white/90 mb-4 pr-0 md:pr-12">
+                        <h4 className="text-sm text-white/40 uppercase tracking-wider mb-4">Philosophy</h4>
+                        <p className="text-2xl md:text-3xl font-bold leading-snug text-white/90 mb-4 pr-0 md:pr-12">
+                            "Never Give Up"
+                        </p>
+                        <p className="text-white/60 max-w-xl leading-relaxed italic mb-2">
                             "The difference between the impossible and the possible lies in a person’s determination."
                         </p>
-                        <p className="text-white/60 max-w-xl leading-relaxed">
+                        <p className="text-white/40 text-sm">
                             — Tommy Lasorda
                         </p>
                     </motion.div>
