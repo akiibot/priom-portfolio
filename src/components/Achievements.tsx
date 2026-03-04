@@ -6,6 +6,11 @@ import { Award } from "lucide-react";
 export default function Achievements() {
     const achievements = [
         {
+            title: "Introduction to Research Career in Machine Learning & XAI",
+            issuer: "Google Research",
+            description: "Explored the fundamentals of machine learning research and explainable AI (XAI). Gained insights into how Google Research approaches ML research, model interpretability, and transparency. Learned about research methodologies, ethical AI principles, and emerging trends shaping the future of AI innovation."
+        },
+        {
             title: "Introduction to Generative AI Studio",
             issuer: "Google Cloud",
             description: "Gained hands-on experience using Google Cloud’s Generative AI Studio to build, customize, and deploy AI models. Learned how to leverage Vertex AI tools for prompt design, model evaluation, and real-world AI applications."
