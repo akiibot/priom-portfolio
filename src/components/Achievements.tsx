@@ -8,37 +8,37 @@ export default function Achievements() {
         {
             title: "Introduction to Research Career in Machine Learning & XAI",
             issuer: "Google Research",
-            description: "Explored the fundamentals of machine learning research and explainable AI (XAI). Gained insights into how Google Research approaches ML research, model interpretability, and transparency. Learned about research methodologies, ethical AI principles, and emerging trends shaping the future of AI innovation.",
+            description: "Explored the fundamentals of machine learning research and explainable AI. Gained insights into model interpretability, transparency, and ethical AI principles. Learned about methodologies and emerging trends shaping AI innovation.",
             image: "/cert-neural-research.png"
         },
         {
             title: "Introduction to Generative AI Studio",
             issuer: "Google Cloud",
-            description: "Gained hands-on experience using Google Cloud’s Generative AI Studio to build, customize, and deploy AI models. Learned how to leverage Vertex AI tools for prompt design, model evaluation, and real-world AI applications.",
+            description: "Gained hands-on experience using Generative AI Studio to build, customize, and deploy AI models. Learned to leverage Vertex AI tools for prompt design, evaluation, and real-world applications.",
             image: "/cert-genai.png"
         },
         {
             title: "Data Fundamentals",
             issuer: "IBM",
-            description: "Developed a strong foundation in data concepts, structures, and lifecycle management. Learned how organizations use data to drive insights and decision-making through data collection, processing, and visualization techniques.",
+            description: "Developed a strong foundation in data concepts, structures, and lifecycle management. Learned how organizations utilize data to drive strategic insights through collection, processing, and visualization techniques.",
             image: "/cert-data-fundamentals.png"
         },
         {
             title: "Python",
             issuer: "HackerRank",
-            description: "Earned certification in Python programming fundamentals, demonstrating proficiency in data structures, functions, loops, and algorithmic problem-solving through hands-on coding challenges.",
+            description: "Earned certification in Python programming fundamentals. Demonstrated proficiency in data structures, essential functions, loops, and algorithmic problem-solving by successfully completing advanced, interactive coding challenges.",
             image: "/cert-python.png"
         },
         {
             title: "Data Analytics Job Simulation",
             issuer: "Deloitte",
-            description: "Completed a professional simulation replicating a data analyst role at Deloitte. Practiced data cleaning, visualization, and storytelling using real-world business datasets to generate actionable insights and client-ready reports.",
+            description: "Completed a professional simulation replicating a data analyst role at Deloitte. Practiced data cleaning, visualization, and storytelling using business datasets to generate actionable, client-ready reports.",
             image: "/cert-data-analytics.png"
         },
         {
             title: "Artificial Intelligence Fundamentals",
             issuer: "IBM",
-            description: "Gained a foundational understanding of AI concepts, machine learning, neural networks, and natural language processing. Explored ethical AI practices and the future impact of AI on industries and society.",
+            description: "Gained foundational understanding of AI concepts, machine learning, neural networks, and natural language processing. Explored ethical AI practices, algorithm biases, and the future impact of AI on society.",
             image: "/cert-ai-fundamentals.png"
         }
     ];
@@ -80,9 +80,11 @@ export default function Achievements() {
                                 </div>
                             )}
 
-                            <h4 className="text-xl font-bold text-white/90 mb-2 leading-snug">{achievement.title}</h4>
-                            <p className="text-sm font-medium text-blue-400/80 tracking-widest uppercase mb-4">{achievement.issuer}</p>
-                            <p className="text-sm text-white/60 leading-relaxed mt-auto">{achievement.description}</p>
+                            <div className="flex flex-col flex-1">
+                                <h4 className="text-xl font-bold text-white/90 mb-2 leading-snug min-h-[56px] flex items-center">{achievement.title}</h4>
+                                <p className="text-sm font-medium text-blue-400/80 tracking-widest uppercase mb-4">{achievement.issuer}</p>
+                                <p className="text-sm text-white/60 leading-relaxed">{achievement.description}</p>
+                            </div>
                         </motion.div>
                     ))}
                 </div>
