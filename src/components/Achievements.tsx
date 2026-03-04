@@ -1,9 +1,12 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Award } from "lucide-react";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Award, X } from "lucide-react";
 
 export default function Achievements() {
+    const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
     const achievements = [
         {
             title: "Introduction to Research Career in Machine Learning & XAI",
@@ -67,11 +70,19 @@ export default function Achievements() {
                             className="flex flex-col p-8 rounded-3xl bg-[#1A1A1A] border border-white/5 hover:bg-white/5 hover:border-white/20 transition-all duration-300 relative group overflow-hidden"
                         >
                             {achievement.image ? (
-                                <div className="relative w-full h-48 mb-6 rounded-2xl overflow-hidden bg-black/40 border border-white/10 shrink-0 p-4">
+                                <div
+                                    className="relative w-full h-48 mb-6 rounded-2xl overflow-hidden bg-black/40 border border-white/10 shrink-0 p-4 cursor-pointer group/image"
+                                    onClick={() => setSelectedImage(achievement.image)}
+                                >
+                                    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover/image:opacity-100 transition-opacity duration-300 z-10 flex items-center justify-center">
+                                        <span className="text-white text-sm font-medium bg-white/10 px-4 py-2 rounded-full backdrop-blur-sm border border-white/20">
+                                            Click to expand
+                                        </span>
+                                    </div>
                                     <img
                                         src={achievement.image}
                                         alt={achievement.title}
-                                        className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105"
+                                        className="w-full h-full object-contain transition-transform duration-700 group-hover/image:scale-105"
                                     />
                                 </div>
                             ) : (
@@ -89,6 +100,42 @@ export default function Achievements() {
                     ))}
                 </div>
             </div>
+
+            {/* Image Modal overlay */}
+            <AnimatePresence>
+                {selectedImage && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        onClick={() => setSelectedImage(null)}
+                        className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-12 bg-black/80 backdrop-blur-sm"
+                    >
+                        <motion.div
+                            initial={{ scale: 0.9, opacity: 0, y: 20 }}
+                            animate={{ scale: 1, opacity: 1, y: 0 }}
+                            exit={{ scale: 0.9, opacity: 0, y: 20 }}
+                            transition={{ type: "spring", damping: 25, stiffness: 300 }}
+                            className="relative max-w-5xl w-full max-h-[90vh] flex flex-col items-center justify-center bg-[#1A1A1A] rounded-2xl md:rounded-3xl border border-white/10 shadow-2xl overflow-hidden"
+                            onClick={(e) => e.stopPropagation()} // Prevent clicks inside modal from closing it
+                        >
+                            <button
+                                onClick={() => setSelectedImage(null)}
+                                className="absolute top-4 right-4 md:top-6 md:right-6 bg-black/50 hover:bg-white/10 text-white rounded-full p-2 backdrop-blur-md transition-colors z-10"
+                            >
+                                <X className="w-5 h-5 md:w-6 md:h-6" />
+                            </button>
+                            <div className="w-full h-full p-4 md:p-8 flex items-center justify-center">
+                                <img
+                                    src={selectedImage}
+                                    alt="Expanded Certificate"
+                                    className="max-w-full max-h-[80vh] object-contain rounded-lg"
+                                />
+                            </div>
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </section>
     );
 }
