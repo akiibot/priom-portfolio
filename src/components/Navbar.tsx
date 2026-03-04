@@ -69,12 +69,12 @@ export default function Navbar() {
             initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 1 }}
-            className={`fixed top-6 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 ${isScrolled ? 'top-4' : 'top-8'}`}
+            className={`fixed inset-x-0 flex justify-center z-50 px-3 md:px-6 transition-all duration-300 pointer-events-none ${isScrolled ? 'top-4' : 'top-6 md:top-8'}`}
         >
-            <div className="flex items-center p-2 rounded-full bg-[#1A1A1A]/80 backdrop-blur-md border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.4)]">
+            <div className="pointer-events-auto flex items-center p-1.5 md:p-2 rounded-full bg-[#1A1A1A]/80 backdrop-blur-md border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.4)] max-w-full">
 
                 {/* Main Links */}
-                <div className="flex items-center pl-2 md:pl-4 pr-1 md:pr-2 space-x-1 relative overflow-x-auto md:overflow-visible no-scrollbar max-w-[50vw] md:max-w-none">
+                <div className="flex items-center pl-2 md:pl-4 pr-1 md:pr-2 space-x-1 relative overflow-x-auto md:overflow-visible no-scrollbar shrink min-w-0">
                     {navLinks.map((link) => (
                         <button
                             key={link.id}
