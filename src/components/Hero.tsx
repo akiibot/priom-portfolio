@@ -31,7 +31,7 @@ export default function Hero() {
                         </h1>
 
                         <h2 className="text-xl sm:text-2xl md:text-3xl font-medium text-white/90 tracking-tight leading-snug">
-                            Data Science Enthusiast <span className="text-blue-400">@ BRACU</span>
+                            Data Science Enthusiast @ <a href="https://www.bracu.ac.bd/" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 transition-colors hover:underline">BRACU</a>
                         </h2>
                     </div>
 
