@@ -74,11 +74,11 @@ export default function About() {
                         {/* Decorative background circle */}
                         <div className="absolute -top-12 -right-12 w-48 h-48 bg-white/10 rounded-full blur-2xl pointer-events-none"></div>
                         <h4 className="text-sm text-white/80 uppercase tracking-wider mb-4 font-semibold">Current Focus</h4>
-                        <p className="text-xl leading-snug font-medium text-white mb-6">
-                            Deep-diving into LLM fine-tuning and AI agent design.
+                        <p className="text-xl leading-snug font-medium text-white mb-4">
+                            Data analysis, Data Science, LLMs, NLP
                         </p>
-                        <p className="text-white/80 text-sm">
-                            Exploring how language models can reason, plan, and act autonomously in complex environments.
+                        <p className="text-white/80 text-sm leading-relaxed">
+                            From cleaning messy CSVs to building transformer-based chatbots, I like projects that move from idea to demo fast. Exploring how language models can reason, plan, and act autonomously in complex environments.
                         </p>
                     </motion.div>
 
@@ -95,7 +95,7 @@ export default function About() {
                             <h4 className="text-xl font-semibold">Core Stack</h4>
                         </div>
                         <div className="flex flex-wrap gap-3">
-                            {["Python", "Pandas", "NumPy", "SQL", "Scikit-learn", "Jupyter", "Google Colab", "GitHub", "LLMs", "NLP"].map((skill) => (
+                            {["Python", "Pandas", "NumPy", "SQL", "Power BI", "Excel", "Scikit-learn", "Jupyter", "Google Colab", "GitHub", "LLMs", "NLP"].map((skill) => (
                                 <span
                                     key={skill}
                                     className="px-4 py-2 rounded-full bg-white/5 border border-white/5 text-sm hover:bg-white/10 transition-colors cursor-default"
@@ -120,10 +120,10 @@ export default function About() {
                         <div>
                             <h4 className="text-sm text-white/40 uppercase tracking-wider mb-2">Off-Duty</h4>
                             <p className="text-lg font-medium leading-snug">
-                                Chess & Gaming
+                                Guitar playing & Gaming
                             </p>
-                            <p className="text-white/40 text-sm mt-2 leading-relaxed">
-                                Because both reward the deliberate, consistent practice I value most.
+                            <p className="text-white/40 text-sm mt-3 leading-relaxed">
+                                I am a different person when I am doing these....
                             </p>
                         </div>
                     </motion.div>
@@ -139,12 +139,12 @@ export default function About() {
                         <div className="absolute top-6 right-8 text-white/5 group-hover:text-white/10 transition-colors">
                             <Quote size={80} />
                         </div>
-                        <h4 className="text-sm text-white/40 uppercase tracking-wider mb-4">Philosophy</h4>
-                        <p className="text-xl md:text-3xl font-light italic leading-snug text-white/90 mb-4 pr-0 md:pr-12">
-                            "Practice is everything."
+                        <h4 className="text-sm text-white/40 uppercase tracking-wider mb-4">Never Give Up</h4>
+                        <p className="text-xl md:text-2xl font-light italic leading-snug text-white/90 mb-4 pr-0 md:pr-12">
+                            "The difference between the impossible and the possible lies in a person’s determination."
                         </p>
                         <p className="text-white/60 max-w-xl leading-relaxed">
-                            Talent gets you started, but it's the hours of repetition that actually make things click. Whether it's code, chess, or concepts — I just keep showing up and doing the reps.
+                            — Tommy Lasorda
                         </p>
                     </motion.div>
 
