@@ -10,7 +10,7 @@ export default function Achievements() {
     const achievements = [
         {
             title: "Introduction to Research Career in Machine Learning & XAI",
-            issuer: "Google Research",
+            issuer: "Neural Research",
             description: "Explored the fundamentals of machine learning research and explainable AI. Gained insights into model interpretability, transparency, and ethical AI principles. Learned about methodologies and emerging trends shaping AI innovation.",
             image: "/cert-neural-research.png"
         },
