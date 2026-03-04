@@ -31,8 +31,8 @@ export default function Achievements() {
         },
         {
             title: "Data Analytics Job Simulation",
-            issuer: "Accenture",
-            description: "Completed a professional simulation replicating a data analyst role at Accenture. Practiced data cleaning, visualization, and storytelling using real-world business datasets to generate actionable insights and client-ready reports.",
+            issuer: "Deloitte",
+            description: "Completed a professional simulation replicating a data analyst role at Deloitte. Practiced data cleaning, visualization, and storytelling using real-world business datasets to generate actionable insights and client-ready reports.",
             image: "/cert-data-analytics.png"
         },
         {
