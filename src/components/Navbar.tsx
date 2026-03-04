@@ -104,7 +104,7 @@ export default function Navbar() {
                 <div className="w-px h-6 bg-white/10 mx-2 md:mx-4 shrink-0" />
 
                 {/* Actions */}
-                <div className="flex items-center pr-1 pl-1 md:pl-2 space-x-2 md:space-x-4 shrink-0">
+                <div className="flex items-center pr-2 md:pr-4 pl-1 md:pl-2 space-x-2 md:space-x-4 shrink-0">
                     <a
                         href="https://drive.google.com/file/d/18mc7bEUGvM-kvyGH1m55Wya3gsjLzzMR/view?usp=sharing"
                         target="_blank"
