@@ -8,32 +8,38 @@ export default function Achievements() {
         {
             title: "Introduction to Research Career in Machine Learning & XAI",
             issuer: "Google Research",
-            description: "Explored the fundamentals of machine learning research and explainable AI (XAI). Gained insights into how Google Research approaches ML research, model interpretability, and transparency. Learned about research methodologies, ethical AI principles, and emerging trends shaping the future of AI innovation."
+            description: "Explored the fundamentals of machine learning research and explainable AI (XAI). Gained insights into how Google Research approaches ML research, model interpretability, and transparency. Learned about research methodologies, ethical AI principles, and emerging trends shaping the future of AI innovation.",
+            image: "/cert-neural-research.png"
         },
         {
             title: "Introduction to Generative AI Studio",
             issuer: "Google Cloud",
-            description: "Gained hands-on experience using Google Cloud’s Generative AI Studio to build, customize, and deploy AI models. Learned how to leverage Vertex AI tools for prompt design, model evaluation, and real-world AI applications."
+            description: "Gained hands-on experience using Google Cloud’s Generative AI Studio to build, customize, and deploy AI models. Learned how to leverage Vertex AI tools for prompt design, model evaluation, and real-world AI applications.",
+            image: "/cert-genai.png"
         },
         {
             title: "Data Fundamentals",
             issuer: "IBM",
-            description: "Developed a strong foundation in data concepts, structures, and lifecycle management. Learned how organizations use data to drive insights and decision-making through data collection, processing, and visualization techniques."
+            description: "Developed a strong foundation in data concepts, structures, and lifecycle management. Learned how organizations use data to drive insights and decision-making through data collection, processing, and visualization techniques.",
+            image: "/cert-data-fundamentals.png"
         },
         {
             title: "Python",
             issuer: "HackerRank",
-            description: "Earned certification in Python programming fundamentals, demonstrating proficiency in data structures, functions, loops, and algorithmic problem-solving through hands-on coding challenges."
+            description: "Earned certification in Python programming fundamentals, demonstrating proficiency in data structures, functions, loops, and algorithmic problem-solving through hands-on coding challenges.",
+            image: "/cert-python.png"
         },
         {
             title: "Data Analytics Job Simulation",
             issuer: "Accenture",
-            description: "Completed a professional simulation replicating a data analyst role at Accenture. Practiced data cleaning, visualization, and storytelling using real-world business datasets to generate actionable insights and client-ready reports."
+            description: "Completed a professional simulation replicating a data analyst role at Accenture. Practiced data cleaning, visualization, and storytelling using real-world business datasets to generate actionable insights and client-ready reports.",
+            image: "/cert-data-analytics.png"
         },
         {
             title: "Artificial Intelligence Fundamentals",
             issuer: "IBM",
-            description: "Gained a foundational understanding of AI concepts, machine learning, neural networks, and natural language processing. Explored ethical AI practices and the future impact of AI on industries and society."
+            description: "Gained a foundational understanding of AI concepts, machine learning, neural networks, and natural language processing. Explored ethical AI practices and the future impact of AI on industries and society.",
+            image: "/cert-ai-fundamentals.png"
         }
     ];
 
@@ -60,10 +66,19 @@ export default function Achievements() {
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                             className="flex flex-col p-8 rounded-3xl bg-[#1A1A1A] border border-white/5 hover:bg-white/5 hover:border-white/20 transition-all duration-300 relative group overflow-hidden"
                         >
-                            {/* Decorative Icon */}
-                            <div className="w-12 h-12 rounded-full bg-blue-500/10 flex items-center justify-center mb-6 group-hover:bg-blue-500/20 transition-colors shrink-0">
-                                <Award className="w-6 h-6 text-blue-400" />
-                            </div>
+                            {achievement.image ? (
+                                <div className="relative w-full h-48 mb-6 rounded-2xl overflow-hidden bg-black/40 border border-white/10 shrink-0 p-4">
+                                    <img
+                                        src={achievement.image}
+                                        alt={achievement.title}
+                                        className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105"
+                                    />
+                                </div>
+                            ) : (
+                                <div className="w-12 h-12 rounded-full bg-blue-500/10 flex items-center justify-center mb-6 group-hover:bg-blue-500/20 transition-colors shrink-0">
+                                    <Award className="w-6 h-6 text-blue-400" />
+                                </div>
+                            )}
 
                             <h4 className="text-xl font-bold text-white/90 mb-2 leading-snug">{achievement.title}</h4>
                             <p className="text-sm font-medium text-blue-400/80 tracking-widest uppercase mb-4">{achievement.issuer}</p>
