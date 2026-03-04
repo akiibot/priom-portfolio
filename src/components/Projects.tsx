@@ -67,7 +67,7 @@ export default function Projects() {
         <section id="projects" className="min-h-screen bg-[#121212] text-white py-20 md:py-32 px-6 md:px-16 w-full relative z-20">
             <div className="max-w-7xl mx-auto">
                 <h3 className="text-3xl md:text-5xl font-bold mb-16 tracking-tight">
-                    Projects and Achievements
+                    Projects
                 </h3>
 
                 {/* Project Grid */}

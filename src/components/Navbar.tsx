@@ -14,6 +14,7 @@ export default function Navbar() {
         { id: "experience", label: "Experience" },
         { id: "education", label: "Education" },
         { id: "projects", label: "Projects" },
+        { id: "achievements", label: "Achievements" },
     ];
 
     // Scroll spy logic

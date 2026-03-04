@@ -4,6 +4,7 @@ import Experience from "@/components/Experience";
 import Education from "@/components/Education";
 import Contact from "@/components/Contact";
 import Projects from "@/components/Projects";
+import Achievements from "@/components/Achievements";
 export default function Home() {
   return (
     <main className="w-full bg-[#121212] min-h-screen">
@@ -14,6 +15,7 @@ export default function Home() {
         <Experience />
         <Education />
         <Projects />
+        <Achievements />
         <Contact />
       </div>
 
