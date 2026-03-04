@@ -103,7 +103,7 @@ export default function Navbar() {
                 {/* Actions */}
                 <div className="flex items-center pr-1 pl-1 md:pl-2 space-x-1 md:space-x-2 shrink-0">
                     <a
-                        href="https://drive.google.com/uc?export=download&id=1eynqfUZYC688Sq1gwWCyi_ZTEZLqS_p_"
+                        href="https://drive.google.com/file/d/18mc7bEUGvM-kvyGH1m55Wya3gsjLzzMR/view?usp=sharing"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center text-xs md:text-sm text-white/80 hover:text-white px-2 md:px-4 py-2 transition-colors duration-300 group"

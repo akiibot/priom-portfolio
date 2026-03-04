@@ -46,8 +46,8 @@ export default function Hero() {
 
                     {/* CTA Buttons */}
                     <div className="flex flex-col sm:flex-row gap-4 pt-2 w-full sm:w-auto">
-                        <a href="https://drive.google.com/uc?export=download&id=1eynqfUZYC688Sq1gwWCyi_ZTEZLqS_p_" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-8 py-3.5 rounded-xl bg-blue-500 hover:bg-blue-600 text-white font-semibold transition-colors shadow-[0_0_20px_rgba(59,130,246,0.5)] w-full sm:w-auto">
-                            Download Resume
+                        <a href="https://drive.google.com/file/d/18mc7bEUGvM-kvyGH1m55Wya3gsjLzzMR/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-8 py-3.5 rounded-xl bg-blue-500 hover:bg-blue-600 text-white font-semibold transition-colors shadow-[0_0_20px_rgba(59,130,246,0.5)] w-full sm:w-auto">
+                            View Resume
                         </a>
                         <a href="#contact" className="inline-flex items-center justify-center px-8 py-3.5 rounded-xl bg-[#1A1A1A] hover:bg-white/10 border border-white/10 text-white font-semibold transition-all w-full sm:w-auto">
                             Hire Me
