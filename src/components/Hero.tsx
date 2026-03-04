@@ -40,10 +40,6 @@ export default function Hero() {
                         A passionate Computer Science undergrad driven by curiosity and innovation. I explore the intersection of Data Science, Machine Learning, and Natural Language Processing, where data turns into decisions and algorithms evolve into intelligence. From developing end-to-end ML pipelines to experimenting with Large Language Models (LLMs), I'm constantly building, learning, and pushing boundaries.
                     </p>
 
-                    {/* Robot Emoji / Mascot */}
-                    <div className="text-4xl">
-                        🤖
-                    </div>
 
                     {/* CTA Buttons */}
                     <div className="flex flex-col sm:flex-row gap-4 pt-2 w-full sm:w-auto">

@@ -1,10 +1,29 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, ReactNode } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { X, Github, ExternalLink } from "lucide-react";
 import { useLenis } from "lenis/react";
+
+type Project = {
+    id: number;
+    title: string;
+    category: string;
+    year: string;
+    description: string;
+    techStack: string;
+    image: string;
+    deepDive: {
+        problem?: string;
+        methodology?: string;
+        outcome?: string[];
+        repoUrl?: string;
+        liveUrl?: string;
+        content?: ReactNode;
+        images?: string[];
+    } | null;
+};
 
 export default function Projects() {
     const [selectedId, setSelectedId] = useState<number | null>(null);
@@ -26,7 +45,7 @@ export default function Projects() {
         };
     }, [selectedId, lenis]);
 
-    const projects = [
+    const projects: Project[] = [
         {
             id: 1,
             title: "SONAR Rock vs Mine Prediction with Python",
@@ -44,9 +63,6 @@ export default function Projects() {
                     "Dataset: 208 samples — 111 mines, 97 rocks, 61 features"
                 ],
                 repoUrl: "https://github.com/PriomHalder/Machine_Learning_Projects/tree/main/SONAR%20Rock%20vs%20Mine%20Prediction%20with%20Python",
-                images: [
-                    "/sonar-structure-final.png"
-                ]
             }
         },
         {
@@ -57,7 +73,43 @@ export default function Projects() {
             description: "Winner, Bangladesh ICT & Innovation Awards 2025 (Industrial Category) — Recognized for a student-led Mars rover project showcasing innovation in automation and system integration, contributing to UN Sustainable Development Goals (SDGs 4, 8, 9, and 17).",
             techStack: "C++ • ROS • Computer Vision",
             image: "/mongol-tori.jpg",
-            deepDive: null // Modal triggers but shows empty state if null
+            deepDive: {
+                content: (
+                    <div className="space-y-6">
+                        <h4 className="text-xl font-bold text-white">
+                            𝐁𝐑𝐀𝐂𝐔 𝐌𝐨𝐧𝐠𝐨𝐥-𝐓𝐨𝐫𝐢 𝐒𝐡𝐢𝐧𝐞𝐬 𝐚𝐭 𝐁𝐚𝐧𝐠𝐥𝐚𝐝𝐞𝐬𝐡 𝐈𝐂𝐓 & 𝐈𝐧𝐧𝐨𝐯𝐚𝐭𝐢𝐨𝐧 𝐀𝐰𝐚𝐫𝐝𝐬 𝟐𝟎𝟐𝟓!
+                        </h4>
+                        <p className="text-white/80 leading-relaxed text-sm md:text-base">
+                            BRAC University proudly celebrates the success of its student-led Mars rover project BRACU Mongol-Tori, who became a winner in the “Industrial” category at the Bangladesh ICT & Innovation Awards 2025.
+                        </p>
+                        <p className="text-white/80 leading-relaxed text-sm md:text-base">
+                            This recognition celebrates innovative solutions in automation and system integration across sectors such as energy, manufacturing, transport, and logistics — and Mongol-Tori has proven to be a standout example of homegrown ingenuity.
+                        </p>
+                        <p className="text-white/80 leading-relaxed text-sm md:text-base">
+                            This project also contributes to the United Nations Sustainable Development Goals 4 (Quality Education), 8 (Decent Work and Economic Growth), 9 (Industry, Innovation & Infrastructure) and 17 (Partnerships for the Goals).
+                        </p>
+                        <p className="text-white/80 leading-relaxed text-sm md:text-base">
+                            Read more at: <a href="https://www.bracu.ac.bd/news/bracu-mongol-tori-first" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 transition-colors">https://www.bracu.ac.bd/.../bracu-mongol-tori-first...</a>
+                        </p>
+                        <p className="text-blue-400 font-medium text-sm">
+                            #BRACU #MongolTori #ICTInnovationAwards #ProudlyBRACU #STEM #SDGs #InnovationForBangladesh
+                        </p>
+                        <div className="mt-8 flex justify-center w-full bg-white/5 p-4 rounded-xl border border-white/10">
+                            <iframe
+                                src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fphoto.php%3Ffbid%3D1228110032679179%26set%3Da.543399921150197&show_text=true&width=500"
+                                width="500"
+                                height="650"
+                                style={{ border: 'none', overflow: 'hidden' }}
+                                scrolling="no"
+                                frameBorder="0"
+                                allowFullScreen={true}
+                                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                                className="max-w-full rounded-lg bg-white"
+                            ></iframe>
+                        </div>
+                    </div>
+                )
+            }
         }
     ];
 
@@ -183,30 +235,38 @@ export default function Projects() {
                                             {/* Details */}
                                             <div className="space-y-12">
 
-                                                <section>
-                                                    <h3 className="text-xl font-semibold mb-4 text-white/90">The Core Problem</h3>
-                                                    <p className="text-white/60 leading-relaxed text-lg">
-                                                        {selectedProject.deepDive.problem}
-                                                    </p>
-                                                </section>
+                                                {selectedProject.deepDive.content ? (
+                                                    selectedProject.deepDive.content
+                                                ) : (
+                                                    <>
+                                                        <section>
+                                                            <h3 className="text-xl font-semibold mb-4 text-white/90">The Core Problem</h3>
+                                                            <p className="text-white/60 leading-relaxed text-lg">
+                                                                {selectedProject.deepDive.problem}
+                                                            </p>
+                                                        </section>
 
-                                                <section>
-                                                    <h3 className="text-xl font-semibold mb-4 text-white/90">Methodology</h3>
-                                                    <p className="text-white/60 leading-relaxed text-lg">
-                                                        {selectedProject.deepDive.methodology}
-                                                    </p>
-                                                </section>
+                                                        <section>
+                                                            <h3 className="text-xl font-semibold mb-4 text-white/90">Methodology</h3>
+                                                            <p className="text-white/60 leading-relaxed text-lg">
+                                                                {selectedProject.deepDive.methodology}
+                                                            </p>
+                                                        </section>
 
-                                                <section>
-                                                    <h3 className="text-xl font-semibold mb-4 text-white/90">Key Outcomes</h3>
-                                                    <ul className="space-y-4">
-                                                        {selectedProject.deepDive.outcome.map((item, i) => (
-                                                            <li key={i} className="flex items-start gap-4 text-white/60 text-lg">
-                                                                <span className="text-blue-400 mt-1">✓</span> {item}
-                                                            </li>
-                                                        ))}
-                                                    </ul>
-                                                </section>
+                                                        {selectedProject.deepDive.outcome && (
+                                                            <section>
+                                                                <h3 className="text-xl font-semibold mb-4 text-white/90">Key Outcomes</h3>
+                                                                <ul className="space-y-4">
+                                                                    {selectedProject.deepDive.outcome.map((item, i) => (
+                                                                        <li key={i} className="flex items-start gap-4 text-white/60 text-lg">
+                                                                            <span className="text-blue-400 mt-1">✓</span> {item}
+                                                                        </li>
+                                                                    ))}
+                                                                </ul>
+                                                            </section>
+                                                        )}
+                                                    </>
+                                                )}
 
                                                 {selectedProject.deepDive.repoUrl && (
                                                     <div className="pt-8">
