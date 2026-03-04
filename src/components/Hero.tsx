@@ -59,54 +59,54 @@ export default function Hero() {
                     <div className="flex items-center gap-6 pt-4 text-white/50">
                         <a href="https://scholar.google.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-white transition-colors text-sm group">
                             <div className="relative flex items-center justify-center w-6 h-6 rounded-full">
-                                <div className="absolute inset-0 -m-4 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                <div className="absolute inset-0 -m-4 pointer-events-none opacity-50 group-hover:opacity-100 transition-opacity duration-500">
                                     <SparklesCore
                                         id="sparkles-scholar"
                                         background="transparent"
                                         minSize={0.4}
-                                        maxSize={1.5}
-                                        particleDensity={80}
+                                        maxSize={2.0}
+                                        particleDensity={100}
                                         className="w-full h-full"
-                                        particleColor="#FFFFFF"
+                                        particleColor="#34D399"
                                     />
                                 </div>
-                                <GraduationCap className="w-5 h-5 relative z-10" />
+                                <GraduationCap className="w-5 h-5 relative z-10 transition-transform duration-300 group-hover:scale-110" />
                             </div>
-                            Google Scholar
+                            <span className="group-hover:text-white transition-colors">Google Scholar</span>
                         </a>
                         <a href="https://linkedin.com/in/priomhalder" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-white transition-colors text-sm group">
                             <div className="relative flex items-center justify-center w-6 h-6 rounded-full">
-                                <div className="absolute inset-0 -m-4 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                <div className="absolute inset-0 -m-4 pointer-events-none opacity-50 group-hover:opacity-100 transition-opacity duration-500">
                                     <SparklesCore
                                         id="sparkles-linkedin"
                                         background="transparent"
                                         minSize={0.4}
-                                        maxSize={1.5}
-                                        particleDensity={80}
+                                        maxSize={2.0}
+                                        particleDensity={100}
                                         className="w-full h-full"
                                         particleColor="#60A5FA"
                                     />
                                 </div>
-                                <Linkedin className="w-4 h-4 relative z-10" />
+                                <Linkedin className="w-4 h-4 relative z-10 transition-transform duration-300 group-hover:scale-110" />
                             </div>
-                            LinkedIn
+                            <span className="group-hover:text-white transition-colors">LinkedIn</span>
                         </a>
                         <a href="https://github.com/PriomHalder" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-white transition-colors text-sm group">
                             <div className="relative flex items-center justify-center w-6 h-6 rounded-full">
-                                <div className="absolute inset-0 -m-4 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                <div className="absolute inset-0 -m-4 pointer-events-none opacity-50 group-hover:opacity-100 transition-opacity duration-500">
                                     <SparklesCore
                                         id="sparkles-github"
                                         background="transparent"
                                         minSize={0.4}
-                                        maxSize={1.5}
-                                        particleDensity={80}
+                                        maxSize={2.0}
+                                        particleDensity={100}
                                         className="w-full h-full"
-                                        particleColor="#FFFFFF"
+                                        particleColor="#A78BFA"
                                     />
                                 </div>
-                                <Github className="w-4 h-4 relative z-10" />
+                                <Github className="w-4 h-4 relative z-10 transition-transform duration-300 group-hover:scale-110" />
                             </div>
-                            GitHub
+                            <span className="group-hover:text-white transition-colors">GitHub</span>
                         </a>
                     </div>
 
