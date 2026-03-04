@@ -56,14 +56,26 @@ export default function Hero() {
 
                     {/* Social Links Row */}
                     <div className="flex items-center gap-6 pt-4 text-white/50">
-                        <a href="https://scholar.google.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-white transition-colors text-sm">
-                            <GraduationCap className="w-4 h-4" /> Google Scholar
+                        <a href="https://scholar.google.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-white transition-colors text-sm group">
+                            <div className="relative flex items-center justify-center">
+                                <div className="absolute inset-0 bg-white/20 group-hover:bg-white/50 blur-[8px] rounded-full animate-pulse transition-colors duration-500"></div>
+                                <GraduationCap className="w-4 h-4 relative z-10" />
+                            </div>
+                            Google Scholar
                         </a>
-                        <a href="https://linkedin.com/in/priomhalder" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-white transition-colors text-sm">
-                            <Linkedin className="w-4 h-4" /> LinkedIn
+                        <a href="https://linkedin.com/in/priomhalder" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-white transition-colors text-sm group">
+                            <div className="relative flex items-center justify-center">
+                                <div className="absolute inset-0 bg-blue-400/20 group-hover:bg-blue-400/50 blur-[8px] rounded-full animate-pulse transition-colors duration-500 delay-75"></div>
+                                <Linkedin className="w-4 h-4 relative z-10" />
+                            </div>
+                            LinkedIn
                         </a>
-                        <a href="https://github.com/PriomHalder" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-white transition-colors text-sm">
-                            <Github className="w-4 h-4" /> GitHub
+                        <a href="https://github.com/PriomHalder" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-white transition-colors text-sm group">
+                            <div className="relative flex items-center justify-center">
+                                <div className="absolute inset-0 bg-white/20 group-hover:bg-white/50 blur-[8px] rounded-full animate-pulse transition-colors duration-500 delay-150"></div>
+                                <Github className="w-4 h-4 relative z-10" />
+                            </div>
+                            GitHub
                         </a>
                     </div>
 
