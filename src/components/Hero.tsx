@@ -117,11 +117,11 @@ export default function Hero() {
                             <p className="text-xs text-white/40 uppercase tracking-wider">Years Academic<br />Experience</p>
                         </div>
                         <div>
-                            <p className="text-3xl font-bold text-blue-400 mb-1">4+</p>
+                            <p className="text-3xl font-bold text-blue-400 mb-1">1</p>
                             <p className="text-xs text-white/40 uppercase tracking-wider">Core AI/ML<br />Projects</p>
                         </div>
                         <div>
-                            <p className="text-3xl font-bold text-blue-400 mb-1">2</p>
+                            <p className="text-3xl font-bold text-blue-400 mb-1">4</p>
                             <p className="text-xs text-white/40 uppercase tracking-wider">Research<br />Interests</p>
                         </div>
                         <div>
