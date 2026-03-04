@@ -74,12 +74,12 @@ export default function Navbar() {
             <div className="flex items-center p-1.5 rounded-full bg-[#1A1A1A]/80 backdrop-blur-md border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.4)]">
 
                 {/* Main Links */}
-                <div className="flex items-center px-1 md:px-2 relative overflow-x-auto no-scrollbar max-w-[50vw] md:max-w-none">
+                <div className="flex items-center pl-1 md:pl-2 relative overflow-x-auto md:overflow-visible no-scrollbar max-w-[50vw] md:max-w-none">
                     {navLinks.map((link) => (
                         <button
                             key={link.id}
                             onClick={() => scrollToSection(link.id)}
-                            className={`relative px-3 md:px-5 py-2 md:py-2.5 text-xs md:text-sm font-medium transition-colors duration-300 z-10 whitespace-nowrap
+                            className={`relative shrink-0 px-3 md:px-5 py-2 md:py-2.5 text-xs md:text-sm font-medium transition-colors duration-300 z-10 whitespace-nowrap
                                 ${activeSection === link.id ? 'text-white' : 'text-white/60 hover:text-white/90'}`}
                         >
                             {activeSection === link.id && (
@@ -96,6 +96,8 @@ export default function Navbar() {
                             <span className="relative z-20">{link.label}</span>
                         </button>
                     ))}
+                    {/* Add a transparent spacer to the end of the flex container to ensure the right padding isn't ignored by the browser's scroll bounding box. This avoids clipping the active pill of the final item. */}
+                    <div className="w-1 md:w-2 shrink-0 md:hidden" />
                 </div>
 
                 {/* Divider */}
