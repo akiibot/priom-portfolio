@@ -31,7 +31,7 @@ export default function Projects() {
             id: 1,
             title: "SONAR Rock vs Mine Prediction with Python",
             category: "Machine Learning Model",
-            year: "2024",
+            year: "2026",
             description: "Developed a machine learning model to classify objects detected by sonar signals as either rock or mine. Involved data preprocessing, feature analysis, and model training. Implemented logistic regression and evaluated model performance using accuracy metrics and confusion matrix visualization.",
             techStack: "Python • Pandas • NumPy • Scikit-learn",
             image: "/sonar-project.png",
