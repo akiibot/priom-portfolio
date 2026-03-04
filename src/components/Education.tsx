@@ -22,7 +22,7 @@ export default function Education() {
     ];
 
     return (
-        <section id="education" className="bg-[#121212] text-white py-32 px-8 md:px-16 w-full relative z-20 border-t border-white/5">
+        <section id="education" className="bg-[#121212] text-white py-20 md:py-32 px-6 md:px-16 w-full relative z-20 border-t border-white/5">
             <div className="max-w-6xl mx-auto">
                 <motion.h3
                     initial={{ opacity: 0, x: -20 }}

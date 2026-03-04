@@ -45,7 +45,7 @@ export default function Contact() {
     }
 
     return (
-        <section id="contact" className="bg-[#121212] text-white pt-24 pb-16 px-8 md:px-16 w-full relative z-20">
+        <section id="contact" className="bg-[#121212] text-white pt-20 pb-12 px-6 md:pt-24 md:pb-16 md:px-16 w-full relative z-20">
             <div className="max-w-4xl mx-auto flex flex-col justify-center">
 
                 <div className="text-center mb-16">

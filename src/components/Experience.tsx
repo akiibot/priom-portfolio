@@ -41,7 +41,7 @@ export default function Experience() {
     ];
 
     return (
-        <section id="experience" className="bg-[#121212] text-white py-32 px-8 md:px-16 w-full relative z-20 border-t border-white/5">
+        <section id="experience" className="bg-[#121212] text-white py-20 md:py-32 px-6 md:px-16 w-full relative z-20 border-t border-white/5">
             <div className="max-w-4xl mx-auto">
 
                 {/* Experience Column */}

@@ -74,12 +74,12 @@ export default function Navbar() {
             <div className="flex items-center p-1.5 rounded-full bg-[#1A1A1A]/80 backdrop-blur-md border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.4)]">
 
                 {/* Main Links */}
-                <div className="flex items-center px-2 relative">
+                <div className="flex items-center px-1 md:px-2 relative overflow-x-auto no-scrollbar max-w-[50vw] md:max-w-none">
                     {navLinks.map((link) => (
                         <button
                             key={link.id}
                             onClick={() => scrollToSection(link.id)}
-                            className={`relative px-5 py-2.5 text-sm font-medium transition-colors duration-300 z-10 
+                            className={`relative px-3 md:px-5 py-2 md:py-2.5 text-xs md:text-sm font-medium transition-colors duration-300 z-10 whitespace-nowrap
                                 ${activeSection === link.id ? 'text-white' : 'text-white/60 hover:text-white/90'}`}
                         >
                             {activeSection === link.id && (
@@ -99,29 +99,29 @@ export default function Navbar() {
                 </div>
 
                 {/* Divider */}
-                <div className="w-px h-6 bg-white/10 mx-2" />
+                <div className="w-px h-6 bg-white/10 mx-1 md:mx-2 shrink-0" />
 
                 {/* Actions */}
-                <div className="flex items-center pr-1 pl-2 space-x-2">
+                <div className="flex items-center pr-1 pl-1 md:pl-2 space-x-1 md:space-x-2 shrink-0">
                     <a
                         href="https://drive.google.com/uc?export=download&id=1eynqfUZYC688Sq1gwWCyi_ZTEZLqS_p_"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center text-sm text-white/80 hover:text-white px-4 py-2 transition-colors duration-300 group"
+                        className="flex items-center text-xs md:text-sm text-white/80 hover:text-white px-2 md:px-4 py-2 transition-colors duration-300 group"
                     >
-                        <Download className="w-4 h-4 mr-2 group-hover:-translate-y-0.5 transition-transform" />
-                        Resume
+                        <Download className="w-3 h-3 md:w-4 md:h-4 mr-1 md:mr-2 group-hover:-translate-y-0.5 transition-transform" />
+                        <span className="hidden sm:inline">Resume</span>
                     </a>
 
                     <button
                         onClick={() => scrollToSection("contact")}
-                        className="flex items-center px-6 py-2.5 rounded-full bg-white text-black text-sm font-medium hover:bg-white/90 transition-colors shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:shadow-[0_0_25px_rgba(255,255,255,0.2)]"
+                        className="flex items-center px-4 md:px-6 py-2 md:py-2.5 rounded-full bg-white text-black text-xs md:text-sm font-medium hover:bg-white/90 transition-colors shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:shadow-[0_0_25px_rgba(255,255,255,0.2)]"
                     >
-                        <span className="relative flex h-2 w-2 mr-2">
+                        <span className="relative flex h-2 w-2 mr-1 md:mr-2">
                             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                             <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
                         </span>
-                        Hire Me
+                        Hire
                     </button>
                 </div>
 

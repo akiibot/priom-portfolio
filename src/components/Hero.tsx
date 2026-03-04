@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function Hero() {
     return (
-        <section id="hero" className="min-h-screen bg-[#121212] text-white pt-32 pb-16 px-8 md:px-16 w-full flex items-center relative z-20">
+        <section id="hero" className="min-h-screen bg-[#121212] text-white pt-28 pb-12 px-6 md:pt-32 md:pb-16 md:px-16 w-full flex items-center relative z-20 overflow-hidden">
             <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
                 {/* Left Column Text Content */}
@@ -26,11 +26,11 @@ export default function Hero() {
                             <span className="text-blue-400 text-sm font-medium">Hello, I'm</span>
                         </motion.div>
 
-                        <h1 className="text-5xl md:text-7xl font-bold tracking-tighter mb-4 text-white">
+                        <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tighter mb-4 text-white">
                             Priom Halder
                         </h1>
 
-                        <h2 className="text-2xl md:text-3xl font-medium text-white/90 tracking-tight leading-snug">
+                        <h2 className="text-xl sm:text-2xl md:text-3xl font-medium text-white/90 tracking-tight leading-snug">
                             Data Science Enthusiast <span className="text-blue-400">@ BRACU</span>
                         </h2>
                     </div>
@@ -45,11 +45,11 @@ export default function Hero() {
                     </div>
 
                     {/* CTA Buttons */}
-                    <div className="flex flex-wrap gap-4 pt-2">
-                        <a href="https://drive.google.com/uc?export=download&id=1eynqfUZYC688Sq1gwWCyi_ZTEZLqS_p_" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-8 py-3.5 rounded-xl bg-blue-500 hover:bg-blue-600 text-white font-semibold transition-colors shadow-[0_0_20px_rgba(59,130,246,0.5)]">
+                    <div className="flex flex-col sm:flex-row gap-4 pt-2 w-full sm:w-auto">
+                        <a href="https://drive.google.com/uc?export=download&id=1eynqfUZYC688Sq1gwWCyi_ZTEZLqS_p_" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-8 py-3.5 rounded-xl bg-blue-500 hover:bg-blue-600 text-white font-semibold transition-colors shadow-[0_0_20px_rgba(59,130,246,0.5)] w-full sm:w-auto">
                             Download Resume
                         </a>
-                        <a href="#contact" className="inline-flex items-center justify-center px-8 py-3.5 rounded-xl bg-[#1A1A1A] hover:bg-white/10 border border-white/10 text-white font-semibold transition-all">
+                        <a href="#contact" className="inline-flex items-center justify-center px-8 py-3.5 rounded-xl bg-[#1A1A1A] hover:bg-white/10 border border-white/10 text-white font-semibold transition-all w-full sm:w-auto">
                             Hire Me
                         </a>
                     </div>
@@ -68,7 +68,7 @@ export default function Hero() {
                     </div>
 
                     {/* Stats Row */}
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t border-white/10">
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 pt-8 border-t border-white/10">
                         <div>
                             <p className="text-3xl font-bold text-blue-400 mb-1">3+</p>
                             <p className="text-xs text-white/40 uppercase tracking-wider">Years Academic<br />Experience</p>

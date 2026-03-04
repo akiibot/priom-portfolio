@@ -64,7 +64,7 @@ export default function Projects() {
     const selectedProject = projects.find(p => p.id === selectedId);
 
     return (
-        <section id="projects" className="min-h-screen bg-[#121212] text-white py-32 px-8 md:px-16 w-full relative z-20">
+        <section id="projects" className="min-h-screen bg-[#121212] text-white py-20 md:py-32 px-6 md:px-16 w-full relative z-20">
             <div className="max-w-7xl mx-auto">
                 <h3 className="text-3xl md:text-5xl font-bold mb-16 tracking-tight">
                     Projects and Achievements
@@ -152,7 +152,7 @@ export default function Projects() {
                                 animate={{ opacity: 1, y: 0, scale: 1 }}
                                 exit={{ opacity: 0, y: "10%", scale: 0.95 }}
                                 transition={{ type: "spring", damping: 25, stiffness: 200 }}
-                                className="fixed inset-x-0 bottom-0 top-16 md:inset-16 md:top-24 z-[101] bg-[#1A1A1A] border border-white/10 md:rounded-[3rem] rounded-t-[2rem] overflow-hidden flex flex-col"
+                                className="fixed inset-x-0 bottom-0 top-20 md:inset-16 md:top-24 z-[101] bg-[#1A1A1A] border border-white/10 md:rounded-[3rem] rounded-t-[2rem] overflow-hidden flex flex-col"
                             >
                                 {/* Modal Header */}
                                 <div className="p-8 md:p-12 flex justify-between items-start border-b border-white/5 relative z-10 shrink-0">
@@ -172,7 +172,7 @@ export default function Projects() {
                                         onClick={() => setSelectedId(null)}
                                         className="p-3 bg-white/5 hover:bg-white/10 rounded-full transition-colors border border-white/10 shrink-0"
                                     >
-                                        <X size={24} />
+                                        <X size={24} className="w-5 h-5 md:w-6 md:h-6" />
                                     </button>
                                 </div>
 

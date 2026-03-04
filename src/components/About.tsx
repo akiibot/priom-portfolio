@@ -13,12 +13,12 @@ import {
 
 export default function About() {
     return (
-        <section id="about" className="bg-[#121212] text-white py-32 px-8 md:px-16 w-full relative z-20 border-t border-white/5">
+        <section id="about" className="bg-[#121212] text-white py-20 md:py-32 px-6 md:px-16 w-full relative z-20 border-t border-white/5">
             <div className="max-w-5xl mx-auto">
 
                 <div className="mb-16">
                     <h3 className="text-sm tracking-[0.2em] text-white/40 uppercase mb-2">About Me</h3>
-                    <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
+                    <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
                         Engineer. <span className="text-blue-400">Researcher.</span> Builder.
                     </h2>
                 </div>
@@ -140,7 +140,7 @@ export default function About() {
                             <Quote size={80} />
                         </div>
                         <h4 className="text-sm text-white/40 uppercase tracking-wider mb-4">Philosophy</h4>
-                        <p className="text-2xl md:text-3xl font-light italic leading-snug text-white/90 mb-4 pr-12">
+                        <p className="text-xl md:text-3xl font-light italic leading-snug text-white/90 mb-4 pr-0 md:pr-12">
                             "Practice is everything."
                         </p>
                         <p className="text-white/60 max-w-xl leading-relaxed">
