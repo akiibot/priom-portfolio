@@ -71,15 +71,15 @@ export default function Navbar() {
             transition={{ duration: 0.8, ease: "easeOut", delay: 1 }}
             className={`fixed top-6 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 ${isScrolled ? 'top-4' : 'top-8'}`}
         >
-            <div className="flex items-center p-1.5 rounded-full bg-[#1A1A1A]/80 backdrop-blur-md border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.4)]">
+            <div className="flex items-center p-2 rounded-full bg-[#1A1A1A]/80 backdrop-blur-md border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.4)]">
 
                 {/* Main Links */}
-                <div className="flex items-center pl-1 md:pl-2 relative overflow-x-auto md:overflow-visible no-scrollbar max-w-[50vw] md:max-w-none">
+                <div className="flex items-center pl-2 md:pl-4 pr-1 md:pr-2 space-x-1 relative overflow-x-auto md:overflow-visible no-scrollbar max-w-[50vw] md:max-w-none">
                     {navLinks.map((link) => (
                         <button
                             key={link.id}
                             onClick={() => scrollToSection(link.id)}
-                            className={`relative shrink-0 px-3 md:px-5 py-2 md:py-2.5 text-xs md:text-sm font-medium transition-colors duration-300 z-10 whitespace-nowrap
+                            className={`relative shrink-0 px-4 md:px-6 py-2.5 text-xs md:text-sm font-medium transition-colors duration-300 z-10 whitespace-nowrap
                                 ${activeSection === link.id ? 'text-white' : 'text-white/60 hover:text-white/90'}`}
                         >
                             {activeSection === link.id && (
@@ -101,17 +101,17 @@ export default function Navbar() {
                 </div>
 
                 {/* Divider */}
-                <div className="w-px h-6 bg-white/10 mx-1 md:mx-2 shrink-0" />
+                <div className="w-px h-6 bg-white/10 mx-2 md:mx-4 shrink-0" />
 
                 {/* Actions */}
-                <div className="flex items-center pr-1 pl-1 md:pl-2 space-x-1 md:space-x-2 shrink-0">
+                <div className="flex items-center pr-1 pl-1 md:pl-2 space-x-2 md:space-x-4 shrink-0">
                     <a
                         href="https://drive.google.com/file/d/18mc7bEUGvM-kvyGH1m55Wya3gsjLzzMR/view?usp=sharing"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center text-xs md:text-sm text-white/80 hover:text-white px-2 md:px-4 py-2 transition-colors duration-300 group"
+                        className="flex items-center text-xs md:text-sm text-white/80 hover:text-white px-2 md:px-4 py-2 hover:bg-white/5 rounded-full transition-all duration-300 group"
                     >
-                        <Download className="w-3 h-3 md:w-4 md:h-4 mr-1 md:mr-2 group-hover:-translate-y-0.5 transition-transform" />
+                        <Download className="w-3.5 h-3.5 md:w-4 md:h-4 mr-1.5 md:mr-2 group-hover:-translate-y-0.5 transition-transform" />
                         <span className="hidden sm:inline">Resume</span>
                     </a>
 
